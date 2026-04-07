@@ -5,11 +5,18 @@ public class HelloApp {
         if (args.length == 0) {
             System.out.println("Hello, World!");
         } 
-        // Enhanced for loop
         else {
+            String result = "";
+
+            // Enhanced for loop
             for (String name : args) {
-                System.out.println("Hello " + name);
+                result = result + name + ", ";
             }
+
+            // Remove last comma and space
+            result = result.substring(0, result.length() - 2);
+
+            System.out.println("Hello " + result);
         }
     }
 }
